@@ -10,12 +10,12 @@ async def on_ready():
     print("Is ready for answer...")
 
 @bot.command()
-async def Mensseger(ctx, *, word):
+async def traducir(ctx, *, word):
     try:
         channel = ctx.channel.name
         text = Translator()
-        translation = text.translate(word, dest='es').text
-        await ctx.send(f"canal {channel} el texto traducido a español es {translation}")
+        translation1 = text.translate(word, dest='en').text
+        await ctx.send(f"canal {channel} el texto traducido a español es {translation1}")
     except Exception as err:
         print(err)
 
